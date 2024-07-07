@@ -1,0 +1,223 @@
+:root {
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Young Serif";
+  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+/* html {
+  margin-left: 5rem;
+} */
+
+html, body, main {
+  min-height: 100vh;
+  min-width: fit-content;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Outfit';
+  font-weight: 400;
+  color: var(--wenge-brown);
+}
+
+body {
+  background-color: var(--eggshell);
+}
+
+/* @media screen and (max-width: 600px) {
+  html {
+    font-size: 25px;
+  }
+} */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 4rem;
+  /* padding: 0; */
+}
+
+article {
+  background-color: var(--white);
+  max-width: 37rem;
+  /* width: max-content; */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+ul, ol {
+  padding-left: 0.3rem;
+  list-style-position: inside;
+  font-size: 0.9rem;
+}
+li {
+  margin-bottom: 1rem;
+}
+span.list-item-content {
+  display: inline-block;
+  width: 90%;
+  vertical-align: top;
+}
+ol span.list-item-content {
+  margin-left: 1rem;
+}
+li::marker {
+  color: var(--dark-raspberry);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0;
+  /* position: relative;
+  top: 50%; */
+  /* float: left; */
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--light-grey);
+}
+
+header {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-family: 'Young Serif';
+  font-weight: 600;
+  margin: 1.5rem 0;
+  color: var(--dark-charcoal);
+}
+p {
+  font-size: 0.9rem;
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+h2:not(.prep h2) {
+  font-family: 'Young Serif';
+  font-weight: 400;
+  color: var(--nutmeg);
+  font-size: 1.6rem;
+}
+
+section.prep {
+  background-color: var(--rose-white);
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-bottom: 1.5rem;
+}
+h2:first-of-type {
+  color: var(--dark-raspberry);
+  margin: 0;
+  font-size: 1.1rem;
+}
+dl {
+  margin-left: 10px;
+}
+div.prep-info-pair {
+  display: list-item;
+  list-style-position: inside;
+  /* position: relative;
+  left: 1.1rem; */
+}
+div.prep-info-pair::marker {
+  color: var(--dark-raspberry);
+  font-size: 0.8rem;
+}
+dt, dd {
+  font-size: 0.9rem;
+  display: inline;
+  margin: 0;
+}
+dt {
+  font-weight: 600;
+  margin-left: 1rem;
+}
+dt::after {
+  content: ': ';
+}
+
+section.ingredients {
+  margin-bottom: 2rem;
+}
+
+section.instructions {
+  margin: 1.5rem 0;
+}
+span.instruction-summary {
+  font-weight: 600;
+}
+
+section.nutrition {
+  margin-top: 1.5rem;
+}
+section.nutrition h2 {
+  margin-bottom: 1.5rem;
+}
+figure {
+  margin: 0;
+}
+table {
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+tr {
+  line-height: 2.5rem;
+}
+span.table-cell-content {
+  position: relative;
+  left: 1.5rem;
+}
+tr:not(:last-child) td {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+@media screen and (max-width: 656px) {
+  html {
+    font-size: 22px;
+  }
+  main {
+    padding: 0;
+  }
+  article {
+    max-width: unset;
+    width: 100%;
+    padding: 5vw;
+  }
+  img {
+    border-radius: 0;
+    max-width: unset;
+    width: 100%;
+    width: calc(100% + 10vw);
+    margin-left: -5vw;
+    margin-top: -5vw;
+    /* position: relative;
+    left: -2rem;
+    top: -2rem; */
+  }
+  /* h1 {
+    margin-top: 0;
+  } */
+}
